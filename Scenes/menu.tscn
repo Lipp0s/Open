@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://djgyiukksqv38"]
+
+[ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_xcgbs"]
+[ext_resource type="FontFile" uid="uid://dy0j7ohk20rsx" path="res://Assets/Font/MisterBrush_Font_1_0/MisterBrush.ttf" id="2_n3w7e"]
+[ext_resource type="Texture2D" uid="uid://cl86jgvkvjsa2" path="res://Assets/Buttons/Button Itch Pack/Start/Start1.png" id="3_y82eh"]
+[ext_resource type="Texture2D" uid="uid://bhtettd621xk0" path="res://Assets/Buttons/Button Itch Pack/Start/Start2.png" id="4_44ukh"]
+[ext_resource type="Texture2D" uid="uid://drfrlu1tgn2i1" path="res://Assets/Buttons/Button Itch Pack/Start/Start3.png" id="5_gvatu"]
+[ext_resource type="Script" path="res://Scripts/StartButton.gd" id="6_ug28i"]
+
+[node name="Menu" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1912.0
+offset_bottom = 1086.0
+texture = ExtResource("1_xcgbs")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1859.0
+offset_bottom = 281.0
+rotation = -0.00124423
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n3w7e")
+theme_override_font_sizes/font_size = 80
+text = "MI SONO CACATO ADDOSSO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Start" type="TextureButton" parent="Buttons"]
+texture_filter = 1
+offset_left = 940.0
+offset_top = 306.0
+offset_right = 1232.0
+offset_bottom = 442.0
+texture_normal = ExtResource("3_y82eh")
+texture_pressed = ExtResource("4_44ukh")
+texture_hover = ExtResource("5_gvatu")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_ug28i")
+
+[connection signal="pressed" from="Buttons/Start" to="Buttons/Start" method="_on_pressed"]
