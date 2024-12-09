@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cl86jgvkvjsa2" path="res://Assets/Buttons/Button Itch Pack/Start/Start1.png" id="3_y82eh"]
 [ext_resource type="Texture2D" uid="uid://bhtettd621xk0" path="res://Assets/Buttons/Button Itch Pack/Start/Start2.png" id="4_44ukh"]
 [ext_resource type="Texture2D" uid="uid://drfrlu1tgn2i1" path="res://Assets/Buttons/Button Itch Pack/Start/Start3.png" id="5_gvatu"]
-[ext_resource type="Script" path="res://Scripts/StartButton.gd" id="6_ug28i"]
+[ext_resource type="Script" path="res://Scripts/start.gd" id="6_aq6ot"]
 
 [node name="Menu" type="Node"]
 
@@ -43,6 +43,6 @@ texture_pressed = ExtResource("4_44ukh")
 texture_hover = ExtResource("5_gvatu")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_ug28i")
+script = ExtResource("6_aq6ot")
 
 [connection signal="pressed" from="Buttons/Start" to="Buttons/Start" method="_on_pressed"]
