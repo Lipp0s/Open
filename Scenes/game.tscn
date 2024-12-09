@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c3rmlkr4h1d7j"]
+[gd_scene load_steps=50 format=3 uid="uid://c3rmlkr4h1d7j"]
 
 [ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_2gptq"]
 [ext_resource type="Texture2D" uid="uid://dwrked4vokfgv" path="res://Assets/Button Itch Pack/Select/Select2.png" id="2_ms1gr"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://mtg5wddb57j0" path="res://Assets/Martial Hero/Sprites/Idle.png" id="6_qtnus"]
 [ext_resource type="Texture2D" uid="uid://wpxxvurgj4h2" path="res://Assets/Medieval Warrior Pack 3/Sprites/Idle.png" id="7_1ywu7"]
 [ext_resource type="Texture2D" uid="uid://icj1tbm28iy8" path="res://Assets/Fire Worm/Sprites/Worm/Idle.png" id="8_5fxwd"]
+[ext_resource type="FontFile" uid="uid://csma663ld00ea" path="res://Assets/Font/MisterBrush_Font_1_0/MisterBrush.woff2" id="9_owkoc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3w23t"]
 atlas = ExtResource("5_nj0a7")
@@ -286,6 +287,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_r7upn"]
+line_spacing = 30.0
+font = ExtResource("9_owkoc")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -372,3 +379,14 @@ position = Vector2(1323, 301)
 scale = Vector2(8.94445, 9.24444)
 sprite_frames = SubResource("SpriteFrames_tnubi")
 autoplay = "default"
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 131.0
+offset_top = 733.0
+offset_right = 993.0
+offset_bottom = 875.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SUCA
+"
+label_settings = SubResource("LabelSettings_r7upn")
