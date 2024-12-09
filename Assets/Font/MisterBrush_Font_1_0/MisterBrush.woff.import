@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/MisterBrush.woff-93f8fe6f1adf0f0ac25b96177303
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
