@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c3rmlkr4h1d7j"]
+[gd_scene load_steps=56 format=3 uid="uid://c3rmlkr4h1d7j"]
 
 [ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_2gptq"]
 [ext_resource type="Texture2D" uid="uid://dwrked4vokfgv" path="res://Assets/Button Itch Pack/Select/Select2.png" id="2_ms1gr"]
@@ -9,6 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://wpxxvurgj4h2" path="res://Assets/Medieval Warrior Pack 3/Sprites/Idle.png" id="7_1ywu7"]
 [ext_resource type="Texture2D" uid="uid://icj1tbm28iy8" path="res://Assets/Fire Worm/Sprites/Worm/Idle.png" id="8_5fxwd"]
 [ext_resource type="FontFile" uid="uid://csma663ld00ea" path="res://Assets/Font/MisterBrush_Font_1_0/MisterBrush.woff2" id="9_owkoc"]
+[ext_resource type="Texture2D" uid="uid://cs4i8dd7woey3" path="res://Assets/Button Itch Pack/Down/Down1.png" id="10_sncaa"]
+[ext_resource type="Texture2D" uid="uid://cadwckiejasjj" path="res://Assets/Buttons/Button Itch Pack/Down/Down2.png" id="11_ejdin"]
+[ext_resource type="Texture2D" uid="uid://cmqrs7a6302vk" path="res://Assets/Buttons/Button Itch Pack/Down/Down3.png" id="12_5wdrc"]
+[ext_resource type="Texture2D" uid="uid://cj8nnhebr3vyq" path="res://Assets/Buttons/Button Itch Pack/Down/Down4.png" id="13_fv4yg"]
+[ext_resource type="Texture2D" uid="uid://cdw52vishlcqt" path="res://Assets/Button Itch Pack/Down/Down5.png" id="14_283r4"]
+[ext_resource type="Script" path="res://Scenes/texture_button_5.gd" id="15_j62ow"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3w23t"]
 atlas = ExtResource("5_nj0a7")
@@ -390,3 +396,19 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "SUCA
 "
 label_settings = SubResource("LabelSettings_r7upn")
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 187.0
+offset_top = 572.0
+offset_right = 410.0
+offset_bottom = 650.0
+texture_normal = ExtResource("10_sncaa")
+texture_pressed = ExtResource("11_ejdin")
+texture_hover = ExtResource("12_5wdrc")
+texture_disabled = ExtResource("13_fv4yg")
+texture_focused = ExtResource("14_283r4")
+stretch_mode = 0
+script = ExtResource("15_j62ow")
+
+[connection signal="pressed" from="TextureButton5" to="TextureButton5" method="_on_pressed"]

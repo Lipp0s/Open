@@ -1,0 +1,199 @@
+[gd_scene load_steps=30 format=3 uid="uid://cwl0ax2f5tu12"]
+
+[ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_ly31i"]
+[ext_resource type="FontFile" uid="uid://cmaqorq8nuwf8" path="res://Assets/Font/MisterBrush_Font_1_0/MisterBrush.otf" id="2_t8iig"]
+[ext_resource type="Texture2D" uid="uid://b7o0k4q5kw4ob" path="res://Assets/EVil Wizard 2/EVil Wizard 2/Sprites/Attack1.png" id="3_rb2fk"]
+[ext_resource type="Texture2D" uid="uid://tttqnf8867m3" path="res://Assets/EVil Wizard 2/EVil Wizard 2/Sprites/Attack2.png" id="4_jqtyw"]
+[ext_resource type="Texture2D" uid="uid://igult3e1ncgw" path="res://Assets/Buttons/Button Itch Pack/Back/Back1.png" id="5_d750o"]
+[ext_resource type="Texture2D" uid="uid://d3is6t4crfbrx" path="res://Assets/Button Itch Pack/Back/Back2.png" id="6_bcadn"]
+[ext_resource type="Texture2D" uid="uid://xjl2t761u3o3" path="res://Assets/Button Itch Pack/Back/Back3.png" id="7_fvl4j"]
+[ext_resource type="Texture2D" uid="uid://h3lbxt7vvsj1" path="res://Assets/Button Itch Pack/Back/Back5.png" id="8_whjce"]
+[ext_resource type="Script" path="res://Scenes/texture_button.gd" id="9_mfcco"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_coffl"]
+font = ExtResource("2_t8iig")
+font_size = 100
+font_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jrk5j"]
+font = ExtResource("2_t8iig")
+font_size = 100
+font_color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ube0"]
+font = ExtResource("2_t8iig")
+font_size = 100
+font_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3jej"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iqyo"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxu2c"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwwt4"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clbbk"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5jlm"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkn8g"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(1500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3n54"]
+atlas = ExtResource("3_rb2fk")
+region = Rect2(1750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wbgx"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh3d7"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxqvf"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r32c"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6umtw"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngrah"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evgox"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(1500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n602v"]
+atlas = ExtResource("4_jqtyw")
+region = Rect2(1750, 0, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwhda"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3jej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iqyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxu2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwwt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clbbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5jlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkn8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3n54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wbgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh3d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxqvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r32c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6umtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngrah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evgox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n602v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mirco" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1919.0
+offset_bottom = 1084.0
+texture = ExtResource("1_ly31i")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 68.0
+offset_right = 474.0
+offset_bottom = 189.0
+text = "MIRCO:"
+label_settings = SubResource("LabelSettings_coffl")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 113.0
+offset_top = 192.0
+offset_right = 463.0
+offset_bottom = 318.0
+text = "Attack: Fa tanto male."
+label_settings = SubResource("LabelSettings_jrk5j")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 330.0
+offset_right = 1124.0
+offset_bottom = 413.0
+text = "HP: boh ti schiatta subito."
+label_settings = SubResource("LabelSettings_1ube0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(952, 797)
+scale = Vector2(7.5, 5.888)
+sprite_frames = SubResource("SpriteFrames_qwhda")
+autoplay = "default"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 1538.0
+offset_top = 51.0
+offset_right = 1849.0
+offset_bottom = 135.0
+texture_normal = ExtResource("5_d750o")
+texture_pressed = ExtResource("6_bcadn")
+texture_hover = ExtResource("7_fvl4j")
+texture_focused = ExtResource("8_whjce")
+stretch_mode = 0
+script = ExtResource("9_mfcco")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
