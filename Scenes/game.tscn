@@ -1,20 +1,35 @@
 [gd_scene load_steps=56 format=3 uid="uid://c3rmlkr4h1d7j"]
 
 [ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_2gptq"]
+[ext_resource type="Script" path="res://Scripts/Control.gd" id="1_oc73o"]
 [ext_resource type="Texture2D" uid="uid://dwrked4vokfgv" path="res://Assets/Button Itch Pack/Select/Select2.png" id="2_ms1gr"]
+[ext_resource type="PackedScene" uid="uid://djgyiukksqv38" path="res://Scenes/menu.tscn" id="3_dyt0d"]
 [ext_resource type="Texture2D" uid="uid://b2xhikfnwaik7" path="res://Assets/Button Itch Pack/Select/Select1.png" id="3_petf4"]
 [ext_resource type="Texture2D" uid="uid://b40pd4em5akrv" path="res://Assets/Button Itch Pack/Select/Select5.png" id="4_wd4jx"]
 [ext_resource type="Texture2D" uid="uid://b1lfuev7simmf" path="res://Assets/EVil Wizard 2/EVil Wizard 2/Sprites/Idle.png" id="5_nj0a7"]
+[ext_resource type="Texture2D" uid="uid://cfu4eitv6p7py" path="res://Assets/Button Itch Pack/Back/Back1.png" id="6_1bfes"]
 [ext_resource type="Texture2D" uid="uid://mtg5wddb57j0" path="res://Assets/Martial Hero/Sprites/Idle.png" id="6_qtnus"]
 [ext_resource type="Texture2D" uid="uid://wpxxvurgj4h2" path="res://Assets/Medieval Warrior Pack 3/Sprites/Idle.png" id="7_1ywu7"]
+[ext_resource type="Texture2D" uid="uid://d3is6t4crfbrx" path="res://Assets/Button Itch Pack/Back/Back2.png" id="7_hugt1"]
 [ext_resource type="Texture2D" uid="uid://icj1tbm28iy8" path="res://Assets/Fire Worm/Sprites/Worm/Idle.png" id="8_5fxwd"]
+[ext_resource type="Texture2D" uid="uid://xjl2t761u3o3" path="res://Assets/Button Itch Pack/Back/Back3.png" id="8_dlfsb"]
 [ext_resource type="FontFile" uid="uid://csma663ld00ea" path="res://Assets/Font/MisterBrush_Font_1_0/MisterBrush.woff2" id="9_owkoc"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cs4i8dd7woey3" path="res://Assets/Button Itch Pack/Down/Down1.png" id="10_sncaa"]
 [ext_resource type="Texture2D" uid="uid://cadwckiejasjj" path="res://Assets/Buttons/Button Itch Pack/Down/Down2.png" id="11_ejdin"]
 [ext_resource type="Texture2D" uid="uid://cmqrs7a6302vk" path="res://Assets/Buttons/Button Itch Pack/Down/Down3.png" id="12_5wdrc"]
 [ext_resource type="Texture2D" uid="uid://cj8nnhebr3vyq" path="res://Assets/Buttons/Button Itch Pack/Down/Down4.png" id="13_fv4yg"]
 [ext_resource type="Texture2D" uid="uid://cdw52vishlcqt" path="res://Assets/Button Itch Pack/Down/Down5.png" id="14_283r4"]
 [ext_resource type="Script" path="res://Scenes/texture_button_5.gd" id="15_j62ow"]
+=======
+[ext_resource type="AudioStream" uid="uid://db54yohrj3c55" path="res://Assets/Sounds/start_sound.mp3" id="10_3vy3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7upn"]
+line_spacing = 30.0
+font = ExtResource("9_owkoc")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3w23t"]
 atlas = ExtResource("5_nj0a7")
@@ -293,21 +308,80 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_r7upn"]
-line_spacing = 30.0
-font = ExtResource("9_owkoc")
-font_size = 100
-font_color = Color(0, 0, 0, 1)
-
 [node name="Game" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oc73o")
+back_sound = ExtResource("10_3vy3p")
+main_menu_scene = ExtResource("3_dyt0d")
+
+[node name="Background" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1922.0
 offset_bottom = 1084.0
 texture = ExtResource("1_2gptq")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Label" type="Label" parent="Control"]
 texture_filter = 1
+layout_mode = 0
+offset_left = 131.0
+offset_top = 733.0
+offset_right = 993.0
+offset_bottom = 875.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SUCA
+"
+label_settings = SubResource("LabelSettings_r7upn")
+
+[node name="SelectVerme" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1210.0
+offset_top = 640.0
+offset_right = 1446.0
+offset_bottom = 747.0
+texture_normal = ExtResource("2_ms1gr")
+texture_pressed = ExtResource("3_petf4")
+texture_hover = ExtResource("3_petf4")
+texture_focused = ExtResource("4_wd4jx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectGaren" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 842.0
+offset_top = 464.0
+offset_right = 1078.0
+offset_bottom = 571.0
+texture_normal = ExtResource("2_ms1gr")
+texture_pressed = ExtResource("3_petf4")
+texture_hover = ExtResource("3_petf4")
+texture_focused = ExtResource("4_wd4jx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectSamurai" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 503.0
+offset_top = 636.0
+offset_right = 735.0
+offset_bottom = 742.0
+texture_normal = ExtResource("2_ms1gr")
+texture_pressed = ExtResource("3_petf4")
+texture_hover = ExtResource("3_petf4")
+texture_focused = ExtResource("4_wd4jx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectMago" type="TextureButton" parent="Control"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 182.0
 offset_top = 468.0
 offset_right = 413.0
@@ -319,73 +393,53 @@ texture_focused = ExtResource("4_wd4jx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="BackButton" type="TextureButton" parent="Control"]
 texture_filter = 1
-offset_left = 508.0
-offset_top = 431.0
-offset_right = 740.0
-offset_bottom = 537.0
-texture_normal = ExtResource("2_ms1gr")
-texture_pressed = ExtResource("3_petf4")
-texture_hover = ExtResource("3_petf4")
-texture_focused = ExtResource("4_wd4jx")
-ignore_texture_size = true
+layout_mode = 0
+offset_left = 132.0
+offset_top = 918.0
+offset_right = 336.0
+offset_bottom = 1014.0
+texture_normal = ExtResource("6_1bfes")
+texture_pressed = ExtResource("7_hugt1")
+texture_hover = ExtResource("8_dlfsb")
 stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="."]
-texture_filter = 1
-offset_left = 838.0
-offset_top = 458.0
-offset_right = 1074.0
-offset_bottom = 565.0
-texture_normal = ExtResource("2_ms1gr")
-texture_pressed = ExtResource("3_petf4")
-texture_hover = ExtResource("3_petf4")
-texture_focused = ExtResource("4_wd4jx")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="Sprites" type="Node2D" parent="."]
 
-[node name="TextureButton4" type="TextureButton" parent="."]
+[node name="Mago" type="AnimatedSprite2D" parent="Sprites"]
+top_level = true
 texture_filter = 1
-offset_left = 1164.0
-offset_top = 436.0
-offset_right = 1400.0
-offset_bottom = 543.0
-texture_normal = ExtResource("2_ms1gr")
-texture_pressed = ExtResource("3_petf4")
-texture_hover = ExtResource("3_petf4")
-texture_focused = ExtResource("4_wd4jx")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(302, 272)
-scale = Vector2(4.256, 4.052)
+position = Vector2(308, 266)
+scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_so12k")
 autoplay = "default"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="Samurai" type="AnimatedSprite2D" parent="Sprites"]
+top_level = true
 texture_filter = 1
-position = Vector2(638, 300)
-scale = Vector2(3.74625, 5.12121)
+position = Vector2(626, 496)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_20qg4")
 autoplay = "default"
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="Garen" type="AnimatedSprite2D" parent="Sprites"]
+top_level = true
 texture_filter = 1
-position = Vector2(967, 330)
-scale = Vector2(3.89815, 7.03333)
+position = Vector2(960.437, 330)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_4ok86")
 autoplay = "default"
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+[node name="Verme" type="AnimatedSprite2D" parent="Sprites"]
+top_level = true
 texture_filter = 1
-position = Vector2(1323, 301)
-scale = Vector2(8.94445, 9.24444)
+position = Vector2(1341, 555)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_tnubi")
 autoplay = "default"
 
+<<<<<<< Updated upstream
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 offset_left = 131.0
@@ -412,3 +466,7 @@ stretch_mode = 0
 script = ExtResource("15_j62ow")
 
 [connection signal="pressed" from="TextureButton5" to="TextureButton5" method="_on_pressed"]
+=======
+[connection signal="pressed" from="Control/BackButton" to="Control" method="_on_back_button_pressed"]
+[connection signal="pressed" from="Control/BackButton" to="Control/BackButton" method="_on_pressed"]
+>>>>>>> Stashed changes
