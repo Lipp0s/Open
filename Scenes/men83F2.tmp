@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djgyiukksqv38"]
+[gd_scene load_steps=11 format=3 uid="uid://djgyiukksqv38"]
 
 [ext_resource type="AudioStream" uid="uid://db54yohrj3c55" path="res://Assets/Sounds/start_sound.mp3" id="1_ujkxx"]
 [ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_xcgbs"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dcf1katqkch0c" path="res://Assets/Button Itch Pack/Quit/Quit1.png" id="7_rqiao"]
 [ext_resource type="Texture2D" uid="uid://i6xb0ug0ds4m" path="res://Assets/Button Itch Pack/Quit/Quit2.png" id="8_a4bsi"]
 [ext_resource type="Texture2D" uid="uid://qna6y3cefuh2" path="res://Assets/Button Itch Pack/Quit/Quit3.png" id="9_t26a5"]
-[ext_resource type="AudioStream" uid="uid://wl6l5f231kkq" path="res://Assets/Sounds/space-station-247790.mp3" id="10_8qnpy"]
 
 [sub_resource type="GDScript" id="GDScript_qn1gm"]
 script/source = "extends Node
@@ -21,9 +20,9 @@ script/source = "extends Node
 func _on_start_pressed():
 	if start_sound:  # Se è stato assegnato un suono
 		play_sound_and_execute(start_sound, func() -> void:
-			get_tree().change_scene_to_file(\"res://Scenes/SelectCharacter.tscn\"))
+			get_tree().change_scene_to_file(\"res://Scenes/game.tscn\"))
 	else:
-		get_tree().change_scene_to_file(\"res://Scenes/SelectCharacter.tscn\")
+		get_tree().change_scene_to_file(\"res://Scenes/game.tscn\")
 
 # Funzione chiamata quando il bottone Exit viene premuto
 func _on_exit_pressed():
@@ -109,11 +108,6 @@ texture_normal = ExtResource("7_rqiao")
 texture_pressed = ExtResource("8_a4bsi")
 texture_hover = ExtResource("9_t26a5")
 stretch_mode = 0
-
-[node name="BackMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_8qnpy")
-volume_db = -32.98
-autoplay = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

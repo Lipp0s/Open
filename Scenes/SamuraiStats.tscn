@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://kdyngdcb6ylb"]
+
+[ext_resource type="Script" path="res://Scripts/SamuraiStats.gd" id="1_5k4go"]
+[ext_resource type="Texture2D" uid="uid://d3liql0pmgukl" path="res://Assets/Backgrounds/5636275.jpg" id="1_5oyuj"]
+[ext_resource type="Texture2D" uid="uid://cfu4eitv6p7py" path="res://Assets/Button Itch Pack/Back/Back1.png" id="2_57wpb"]
+[ext_resource type="AudioStream" uid="uid://db54yohrj3c55" path="res://Assets/Sounds/start_sound.mp3" id="2_xkguy"]
+[ext_resource type="Texture2D" uid="uid://d3is6t4crfbrx" path="res://Assets/Button Itch Pack/Back/Back2.png" id="3_xk7sb"]
+[ext_resource type="Texture2D" uid="uid://xjl2t761u3o3" path="res://Assets/Button Itch Pack/Back/Back3.png" id="4_eychl"]
+
+[node name="SamuraiStats" type="Node2D"]
+
+[node name="Graphic" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5k4go")
+click_sound = ExtResource("2_xkguy")
+
+[node name="Background" type="TextureRect" parent="Graphic"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_5oyuj")
+
+[node name="BackButton" type="TextureButton" parent="Graphic"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 937.0
+offset_right = 274.0
+offset_bottom = 1030.0
+texture_normal = ExtResource("2_57wpb")
+texture_pressed = ExtResource("3_xk7sb")
+texture_hover = ExtResource("4_eychl")
+stretch_mode = 0
+
+[connection signal="pressed" from="Graphic/BackButton" to="Graphic" method="_on_back_button_pressed"]

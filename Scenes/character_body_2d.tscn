@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bv6dp05mxt08w"]
+[gd_scene load_steps=32 format=3 uid="uid://d2yihdrutfml"]
 
 [ext_resource type="Texture2D" uid="uid://b1lfuev7simmf" path="res://Assets/EVil Wizard 2/EVil Wizard 2/Sprites/Idle.png" id="1_6jlxg"]
 [ext_resource type="Texture2D" uid="uid://b7o0k4q5kw4ob" path="res://Assets/EVil Wizard 2/EVil Wizard 2/Sprites/Attack1.png" id="1_kwd3s"]
